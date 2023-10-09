@@ -1,0 +1,60 @@
+<div *ngFor="let i of Mgrp.matches" >
+    <div *ngIf=" grp!='All Groups' ; else elseBlock">
+        
+        <div *ngIf="i.group == grp ">
+        <table class="match" >
+            <tr style="height: 100px;">
+                <td style="text-align: center;width:30%;border-right: 1px;">{{i.round}} </td>
+                <td style="text-align: center;width:30%;">{{i.group}}</td>
+                <td style="text-align: left;width:30%;">current bet :{{M_serv.selected(i)}}</td>
+            </tr>
+            <tr>
+                <td style="text-align: right; width:30%; border-right: 1px;"><img src="{{i.team1img}}" width="80px"></td>
+                <td style="text-align: center; width:30%;">v</td>
+                <td style="text-align: left; width:30%;"><img src="{{i.team2img}}" width="80px"></td>
+            </tr>
+            <tr>
+                <td style="text-align: right; width:30%;">{{i.team1}}</td>
+                <td style="text-align: center; width:30%;">{{i.date}}</td>
+                <td style="text-align: left; width:30%;">{{i.team2}}</td>
+                
+            </tr>
+            <tr><td colspan="3"></td></tr>
+            <tr style="height: 50px;">
+                <td style="text-align: right; width:30%;"><button  [ngClass]="M_serv.selected(i)=='1'? 'selected':''" class="button" style="height: 50px; width: 200px;  border: 0em;" (click)="M_serv.bet(i,'1')" >1: <p style="color: gold;">{{i.cout1}}</p></button> </td>
+                <td style="text-align: center; width:30%;"><button [ngClass]="M_serv.selected(i)=='x'? 'selected':''"  class="button" style="height: 50px; width: 200px;  border: 0em;"(click)="M_serv.bet(i,'x')" >X: <p style="color: gold;">{{i.coutx}}</p> </button></td>
+                <td style="text-align: left; width:30%;"><button [ngClass]="M_serv.selected(i)=='2'? 'selected':''"  class="button" style="height: 50px; width: 200px; border: 0em;" (click)="M_serv.bet(i,'2')" >2: <p style="color: gold;">{{i.cout2}}</p></button></td>
+            </tr>
+        </table>
+        <br>
+        </div>
+    </div>
+
+    <ng-template #elseBlock>
+    <table class="match" >
+        <tr style="height: 100px;">
+            <td style="text-align: center;width:30%;border-right: 1px;">{{i.round}} </td>
+            <td style="text-align: center;width:30%;">{{i.group}}</td>
+            <td style="text-align: left;width:30%;">current bet :{{M_serv.selected(i)}}</td>
+        </tr>
+        <tr>
+            <td style="text-align: right; width:30%; border-right: 1px;"><img src="{{i.team1img}}" width="80px"></td>
+            <td style="text-align: center; width:30%;">v</td>
+            <td style="text-align: left; width:30%;"><img src="{{i.team2img}}" width="80px"></td>
+        </tr>
+        <tr>
+            <td style="text-align: right; width:30%;">{{i.team1}}</td>
+            <td style="text-align: center; width:30%;">{{i.date}}</td>
+            <td style="text-align: left; width:30%;">{{i.team2}}</td>
+            
+        </tr>
+        <tr><td colspan="3"></td></tr>
+        <tr style="height: 50px;">
+            <td style="text-align: right; width:30%;"><button [ngClass]="M_serv.selected(i)=='1'? 'selected':''" class="button" style="height: 50px; width: 200px;  border: 0em;" (click)="M_serv.bet(i,'1')">1: <p style="color: gold;">{{i.cout1}}</p></button> </td>
+            <td style="text-align: center; width:30%;"><button [ngClass]="M_serv.selected(i)=='x'? 'selected':''" class="button" style="height: 50px; width: 200px;  border: 0em;" (click)="M_serv.bet(i,'x')">X: <p style="color: gold;">{{i.coutx}}</p> </button></td>
+            <td style="text-align: left; width:30%;"><button [ngClass]="M_serv.selected(i)=='2'? 'selected':''" class="button" style="height: 50px; width: 200px; border: 0em;" (click)="M_serv.bet(i,'2')">2: <p style="color: gold;">{{i.cout2}}</p></button></td>
+        </tr>
+    </table>
+    <br>
+    </ng-template>
+</div> 

@@ -1,0 +1,54 @@
+<div class="container" style="height: 100px;">
+    <div>
+        <div class="row">
+            <h1 style="margin-top: 1cm;"><b>Matches</b></h1>
+        </div>
+        
+</div>
+
+<div *ngFor="let i of Mgrp.matches">
+    <div (click)="clickEvent()">
+            <div routerLink="buynow" class="row" id="matches" style="margin-bottom:20px ;">
+                <div class="col-sm-12">
+                    <div class="card shadow rounded-pill " style="overflow: hidden;">
+                        <div class="card-body p-0">
+        
+                            <div class="row">
+                                <div class="col-sm-3 d-flex flex-direction-column justify-content-center align-items-center" style="background-color:#811532 ;">
+                                    <div class="col-sm-4 d-flex justify-content-center align-items-center"style="color:white;">
+                                        <div>
+                                        <div class="flag justify-content-center">
+                                            <img style="width: 40px;height: 40px; margin-top: 10px; align-content: center;margin-left: 20px;" class="rounded-circle" src="{{i.team1img}}" >
+                                        </div>
+                                        <h4 style="margin:auto 1px"><b style="color: white; text-align: center;">{{i.team1}}</b></h4>
+                                        </div>
+                                        </div>
+                             
+                                </div>
+                                <div class="col-sm-2" style="text-align: center; margin-top:30px; font-size:x-large"><b>-</b></div>
+                                <div class="col-sm-2" style="text-align: center;">
+                                    <h6 style="margin: 1px;">{{i.group}}</h6>
+                                    <h1 style="margin: 1px;"><b>X</b></h1>
+                                    <h6 style="margin: 1px;">{{i.date}}</h6>
+                                </div>
+                                <div class="col-sm-2" style="text-align: center; margin-top:30px; font-size:x-large"><b>-</b></div>
+                                <div class="col-sm-3 d-flex flex-direction-column justify-content-center align-items-center" style="background-color:#811532 ;">
+                                    <div class="col-sm-4 d-flex justify-content-center align-items-center"style="color:white;">
+                                        <div>
+                                        <div class="flag">
+                                            <img style="width: 40px;height: 40px; margin-top: 10px; margin-left: 20px;" class="rounded-circle" src="{{i.team2img}}" >
+                                        </div>
+                                        <h4 style="margin:auto 1px"><b style="color: white;">{{i.team2}}</b></h4>
+                                        </div>
+                                        </div>
+                             
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        
+</div>

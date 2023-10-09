@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bets</title>
+</head>
+
+
+
+<body style="margin-top: 80px;">
+    <div style="display: block;">
+        <div class="header"><app-header ></app-header></div>
+        <div class="bg">
+            <ul style="height: 80px; width: 200px; margin-top: 7%;">
+            <div class="grp" style="color: #7e1111; font-size: 20px;">Groups: </div> 
+                <li (click)="getVal(item)" *ngFor="let item of groups" [ngClass]="item==selectedgrp? 'selected' : 'notselected'" style="white-space: nowrap; font-size: 15px;" [value]="item" >{{item}}</li>
+            </ul>
+        </div>  
+
+        <div style="margin-top: 300px;">
+            <app-match></app-match>
+        </div>
+    </div> 
+</body>
+</html>

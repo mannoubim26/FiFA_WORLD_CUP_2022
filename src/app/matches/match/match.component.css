@@ -1,0 +1,29 @@
+table{
+    font-size: x-large;
+    color: white;
+    background-image: url("src\assets\pattern.png");
+    height: 150px;
+    background-position:top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+.button {
+    color: white;
+	background-color: rgba(255, 255, 255, 0);
+    margin-bottom: 30px;
+}
+.button:hover{
+    color: white;
+	background-color: rgba(0,0,0,0.5);
+}
+.selected{
+    background-color:rgba(0,0,0,1);
+}
+.match{
+    width:100% ; 
+    background-color: rgba(0, 0, 0, 0.411);
+    border-radius: 50px;
+    box-shadow: 0px 8px 18px 0 #7e111194, 0 6px 20px 0 rgba(90, 90, 90, 0.322);
+    margin-top: 80px;
+}

@@ -1,0 +1,25 @@
+table {
+    width:101%
+}
+h1 {
+    margin-left: 4px;
+}
+tr {
+    height:270px;
+    font-style: Serif ;
+}
+td {
+    float : center ;
+    text-anchor: middle;
+    align-items: center;
+    text-align: center;
+    width:14%;
+}
+div {
+    background-color: #eeeee4;
+    
+}
+img {
+   width : 50%;
+   float: center ;
+   height : 50%}

@@ -1,0 +1,15 @@
+table.m {
+    width: 25%;
+    border-collapse:separate;
+    border:solid black 1px;
+    border-radius:6px;
+    margin-top:5%;
+    margin-left:6%;
+    background-color: white;
+}
+p.center{
+    text-align: center;
+}
+div.abc{
+background-color: blueviolet;
+}

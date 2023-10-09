@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <div class="row">
+        <h1 style="margin-top: 1cm; margin-left: 1cm;"><b>Checkout</b></h1>
+    </div>
+<div class="row">
+    <table style="width: 70%;"><tr><td style="width: 20%;"></td><td style="width:80%">
+  <div class="col-75">
+    <div class="container col-50" >
+        
+      <form>
+      
+        <div class="row" style="text-align: center;">
+          <div class="col-50">
+            <h3>Billing Address</h3>
+            <label style="align-content: center;" for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" [ngClass]="uname? 'invalid':''" placeholder="John M. Doe" [(ngModel)]="username">
+            <label style="margin-left: -5%;" for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" [ngClass]="email? 'invalid':''" [(ngModel)]="emaill" name="email" placeholder="john@example.com">
+            <label style="margin-left: -2%;" for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" [ngClass]="adress? 'invalid':''" [(ngModel)]="adresss" name="address" placeholder="542 W. 15th Street">
+            <label style="margin-left: -8%;" for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" [ngClass]="city? 'invalid':''" [(ngModel)]="cityy" name="city" placeholder="New York">
+
+            <div class="row">
+              <div class="col-50">
+                <label style="margin-left: -10%;" for="state">State</label>
+                <input type="text" [ngClass]="state? 'invalid':''" [(ngModel)]="statee" id="state" name="state" placeholder="NY">
+              </div>
+              <div class="col-50">
+                <label style="margin-left: -12%;" for="zip">Zip</label>
+                <input type="text" [ngClass]="zip? 'invalid':''" [(ngModel)]="zipp" id="zip" name="zip" placeholder="10001">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h3 style="margin-left: -10%;">Payment</h3>
+            <label style="margin-left: 2%;" for="fname">Accepted Cards</label>
+            <div style="margin-left: -10%;" class="icon-container" >
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label for="cname">Name on Card</label>
+            <input type="text" [ngClass]="cname? 'invalid':''" [(ngModel)]="cnamee" id="cname" name="cardname" placeholder="John More Doe">
+            <label style="margin-left: 7%;" for="ccnum">Credit card number</label>
+            <input type="text" [ngClass]="cnum? 'invalid':''" [(ngModel)]="cnumm" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <label style="margin-left: -3%;" for="expmonth">Exp Month</label>
+            <input type="text" [ngClass]="expm? 'invalid':''" [(ngModel)]="expmm" id="expmonth" name="expmonth" placeholder="September">
+            <div class="row">
+              <div class="col-50">
+                <label style="margin-left: -5%;" for="expyear">Exp Year</label>
+                <input type="text" [ngClass]="expy? 'invalid':''" [(ngModel)]="expyy" id="expyear" name="expyear" placeholder="2018">
+              </div>
+              <div class="col-50">
+                <label style="margin-left: -10%;" for="cvv">CVV</label>
+                <input type="text" [ngClass]="cvv? 'invalid':''" [(ngModel)]="cvvv" id="cvv" name="cvv" placeholder="352">
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+        <input type="submit" (click)="check()" value="Continue to checkout" class="btn">
+      </form>
+    
+    </div>
+  </div></td></tr></table>
+  <div class="buy col-25">
+    <div class="container">
+      <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b></b></span></h4>
+      <p><a>Match Ticket</a> <span class="price">{{price | currency:'USD'}}</span></p>
+      <hr>
+      <input type="text" name="numtickets" value="{{amount}}" readonly><button style="width: 50%;" (click)="addticket()">+</button><button style="width: 50%;" (click)="removeticket()">-</button>
+      <hr>
+      <p>Total <span class="price" style="color:black"><b>{{totalprice| currency:'USD'}}</b></span></p>
+      <div [ngClass]="suc?'abc':'asx'">Success</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

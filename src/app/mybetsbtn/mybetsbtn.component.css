@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
+:root {
+    --font-style: 'Nunito Sans', sans-serif;
+}
+button{
+    color: white;
+    font-size: large;
+    font-family: var(--font-style);
+    position: fixed;
+    top: 80px;
+    left: 50px;
+    background-color: #131315;
+    border: 0em;
+    height: 5%;
+    width: 10%;
+    cursor: pointer;
+    border-radius: 25px;
+    border: 0.1px solid #8A1538;
+    background-color: #18181B;
+    box-shadow: 0 4px 8px 0 rgb(255, 81, 81), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

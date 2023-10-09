@@ -1,0 +1,30 @@
+<body >
+    <div class="bgD">
+<div style="margin-right: 8cm;" class="login-box">
+    <h2>Login</h2>
+    <form>
+        <div class="user-box">
+            <input type="text" name="uname" [(ngModel)]="username">
+            <label>Username</label>
+        </div>
+        <div class="user-box">
+            <input type="password" name="pword" [(ngModel)]="password">
+            <label>Password</label>
+        </div>
+
+        <div class="button-form">
+
+            <button (click)="login()" id="submit">
+               Submit
+            </button>
+
+            <div id="register">
+                {{errorMsg}}
+            </div>
+
+        </div>
+
+    </form>
+</div>  
+</div>
+</body>

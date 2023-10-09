@@ -1,0 +1,39 @@
+<div>
+    <div class="container" style="width: 60%; margin-left: 20%;">
+      <h1 style="margin-top: 3cm;">My Bets <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b></b></span></h1>
+     
+      <p></p><br>
+<div *ngIf="cotes==0"><div>{{ff()}}</div></div>
+<table style="width:100% ;">
+    <tr>
+        <td style="padding-left: 100px ; width:25%;">Team 1 </td>
+        <td style="text-align: right; padding-right: 10px ; width:25%;"> Team2</td>
+        <td style="text-align: center;padding-right: 20px ; width:25%;">Choices</td>
+        <td style="text-align: center;padding-right: 20px ; width:25%;">Values
+            
+        </td>
+        
+    </tr>       
+</table>
+<hr>
+      <div *ngFor="let i of M_serv.mybets" >
+        <table style="width:100% ">
+            <tr>
+                <td style="padding-left: 100px ; width:25%;"><img width="30px" src="{{i.team1img}}"> {{i.team1}} </td>
+                <td style="text-align: right; padding-right: 10px ; width:20%;"> {{i.team2}} <img width="30px" src="{{i.team2img}}"></td>
+                <td style="text-align: center;padding-right: 20px ; width:20%;">{{i.Choice}}</td>
+                <td style="text-align: center;padding-right: 20px ; width:20%;">
+                    {{selectedCout(i)}}
+                </td>
+            </tr>       
+        </table>
+    </div> 
+   
+      <hr>
+      How much are you betting ?<br>
+      <input style="height: 2cm;" type="text" name="numtickets" value="{{amount}}" [(ngModel)]="amount">
+      <p>Total <span class="price" style="color:black"><b>{{ totalprice() | currency:'USD'}}</b></span></p>
+      <button (click)="check()" class="button">checkout</button><br>
+      <div style="margin-top: 20px;" [ngClass]="x?'abc':'asx'">Success</div>
+    </div>
+  </div>
